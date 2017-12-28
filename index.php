@@ -33,6 +33,7 @@ if ($cin == 6) { $color = "#f99a66"; }
 ?>
 <head>
 <title>devCredits - <?php echo $title ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="An easy way to make a credits page for devRant community projects">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">
 <link href="https://unpkg.com/picnic" rel="stylesheet">

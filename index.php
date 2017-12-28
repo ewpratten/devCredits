@@ -17,6 +17,12 @@ if ($title == null) {
 <meta name="description" content="An easy way to make a credits page for devRant community projects">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">
 <link href="https://unpkg.com/picnic" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 <style>
 	body {
 		background-color:#a872a3;

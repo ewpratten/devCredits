@@ -17,66 +17,30 @@ if ($title == null) {
 <meta name="description" content="An easy way to make a credits page for devRant community projects">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">
 <link href="https://unpkg.com/picnic" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/resources/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
-<style>
-	body {
-		background-color:#a872a3;
-		font-family: Comfortaa;
-		font-weight: normal;
-		margin:0;
-	}
-	h1 {
-		font-weight: normal;
-    color: #54556E;
-    font-family: Comfortaa;
-	}
-	.maincard {
-		background-color:#ffffff;
-		height:100%;
-		margin:0;
-	}
-	.user:hover, a:hover {
-		background-color:#2a8b9d;
-		font-weight: normal;
-    color: #FFFFFF;
-    font-family: Comfortaa;
-	}
-	.user {
-		margin:0;
-		padding:0;
-	}
-	.line {
-		background-color:#54556E;
-		width:96%;
-		height:1px;
-		display:flex;
-		margin-left:auto;
-		margin-right:auto;
-	}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 
 <div class="flex one three-600 demo">
 	<div><span></span></div>
-	<div style="text-align:center;" class="maincard"><span>
-				<br>
-				<h1><?php echo $title ?></h1>
-				<div class="line"></div>
-				<div class="flex two demo">
+	<div class="maincard">
+			<h1><?php echo $title ?></h1>
+			<div class="credits">Made with &#9825; by</div>
+			<hr />
+			<div class="flex two demo">
 				<?php
-				for ($i = 0; $i <= count($users); $i++) {
+				for ($i = 0; $i < count($users); $i++) {
 					echo  '<a href="https://devrant.com/users/'; echo $users[$i]; echo '"><div class="user"><span><h2>'; echo $users[$i]; echo '</h2></span></div></a>';
 				}
 				?>
-				</div>
-	</span></div>
-	<div><span></span></div>
+			</div>
+		</div>
 </div>
 </body>

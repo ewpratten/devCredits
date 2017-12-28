@@ -1,0 +1,37 @@
+body {
+	background-color:#a872a3;
+	font-family: Comfortaa;
+	font-weight: normal;
+	margin:0;
+}
+h1 {
+	font-weight: normal;
+   	color: #54556E;
+   	font-family: Comfortaa;
+}
+.maincard {
+	background-color:#ffffff;
+	height:100%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-radius: 5px;
+	text-align: center;
+	word-wrap: break-word;
+}
+.user:hover {
+	background-color:#2a8b9d;
+	font-weight: normal;
+    color: #FFFFFF;
+}
+.user {
+	margin: 2%;
+	border-radius: 5px;
+	padding: 0;
+}
+hr {
+	background-color:#54556E;
+	width:96%;
+}
+*{
+	
+}

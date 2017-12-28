@@ -10,7 +10,6 @@ function banner(username,text){
 	}).then(function(resp){
 		return resp.json()
 	}).then(function(user){
-		console.log(user.profile.avatar);
 		var canvas = document.getElementById("banner");
 		var ctx = canvas.getContext("2d");
 		var image = new Image();

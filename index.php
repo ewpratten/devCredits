@@ -1,18 +1,4 @@
 <?php
-$title = $_GET["title"];
-$cin = $_GET['color'];
-$uservar = $_GET["users"];
-if ($uservar == null) {
-	$uservar = "ewpratten,linuxxx,404response,thatdude";
-}
-$users = explode(",", $uservar);
-
-if ($title == null) {
-	$title = "devCredits";
-}
-if ($cin == null) {
-	$cin = 1;
-}
 
 // /api/userprofile.php/?username=
 
@@ -24,12 +10,39 @@ if ($cin == null) {
 //5 - yellow
 //6 - orange
 
-if ($cin == 1) { $color = "#a872a3"; }
-if ($cin == 2) { $color = "#7cc8a2"; }
-if ($cin == 3) { $color = "#2a8b9d"; }
-if ($cin == 4) { $color = "#d55161"; }
-if ($cin == 5) { $color = "#ecd175"; }
-if ($cin == 6) { $color = "#f99a66"; }
+$colors = array(1 => '#a872a3',
+				2 => '#7cc8a2',
+				3 => '#2a8b9d',
+				4 => '#d55161',
+				5 => '#ecd175',
+				6 => '#f99a66');
+
+if (isset($_GET["title"])) {
+	$title = htmlspecialchars($_GET["title"]);
+} else {
+	$title = "devCredits";
+}
+
+if (isset($_GET["color"])) {
+	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
+} else {
+	$cin = 1;
+}
+
+if (array_key_exists($cin, $colors)) {
+	$color = $colors[$cin];
+} else {
+	$color = $colors[1];
+}
+
+if (isset($_GET["users"])) {
+	$uservar =  htmlspecialchars($_GET["users"]);
+	$uservar = str_replace(" ", "", $uservar);
+} else {
+	$uservar = "ewpratten,linuxxx,404response,thatdude";
+}
+$users = explode(",", $uservar);
+
 ?>
 <head>
 <title>devCredits - <?php echo $title ?></title>

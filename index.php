@@ -1,6 +1,6 @@
 <?php
 $title = $_GET["title"];
-
+$cin = $_GET['color'];
 $uservar = $_GET["users"];
 if ($uservar == null) {
 	$uservar = "ewpratten,linuxxx,404response,thatdude";
@@ -10,7 +10,24 @@ $users = explode(",", $uservar);
 if ($title == null) {
 	$title = "devCredits";
 }
+if ($cin == null) {
+	$cin = 1;
+}
 
+//colors:
+//1 - purple
+//2 - green
+//3 - blue
+//4 - red
+//5 - yellow
+//6 - orange
+
+if ($cin == 1) { $color = "#a872a3"; }
+if ($cin == 2) { $color = "#7cc8a2"; }
+if ($cin == 3) { $color = "#2a8b9d"; }
+if ($cin == 4) { $color = "#d55161"; }
+if ($cin == 5) { $color = "#ecd175"; }
+if ($cin == 6) { $color = "#f99a66"; }
 ?>
 <head>
 <title>devCredits - <?php echo $title ?></title>
@@ -23,6 +40,7 @@ if ($title == null) {
 <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="style.css">
+<style>body {background-color:<?php echo $color ?>; }</style>
 </head>
 
 <body>

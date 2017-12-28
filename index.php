@@ -14,6 +14,8 @@ if ($cin == null) {
 	$cin = 1;
 }
 
+// /api/userprofile.php/?username=
+
 //colors:
 //1 - purple
 //2 - green

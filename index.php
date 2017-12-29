@@ -61,7 +61,7 @@ $users = explode(",", $uservar);
 
 	<div class="row">
 	  <div class=" mx-auto">
-	    <div class="card col-md-12 col-sm-4 col-xs-4">
+	    <div class="card maincard col-md-12 col-sm-4 col-xs-4">
 	      <div class="card-body mx-auto">
 	        <h1 class="card-title text-center"><?php echo $title ?></h1>
 	        <div class="card-text text-center">

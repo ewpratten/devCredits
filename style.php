@@ -14,6 +14,15 @@
 	//4 - red
 	//5 - yellow
 	//6 - orange
+	
+	$hoverc = array(0 => '#000000',
+				1 => '#69306d',
+				2 => '#eb9486',
+				3 => '#90c2e7',
+				4 => '#fe64a3',
+				5 => '#ff7f11',
+				6 => '#57b8ff');
+
 
 	session_start();
     $cin = $_SESSION['mainColor'];
@@ -21,31 +30,10 @@
 
 	if (array_key_exists($cin, $colors)) {
 		$color = $colors[$cin];
+		$hover = $hoverc[$cin];
 	} else {
 		$color = $colors[1];
-	}
-
-	switch($color){
-		case $colors[1]:
-			$hover = "#69306d";
-			break;
-		case $colors[2]:
-			$hover = "#eb9486";
-			break;
-		case $colors[3]:
-			$hover = "#90c2e7";
-			break;
-		case $colors[4]:
-			$hover = "#fe64a3";
-			break;
-		case $colors[5]:
-			$hover = "#ff7f11";
-			break;
-		case $colors[6]:
-			$hover = "#57b8ff";
-			break;
-		default:
-			$hover = "#000000";
+		$hover = $hoverc[0];
 	}
 	//templates from coolors.co
 	
@@ -61,14 +49,6 @@ if ($bgIsAnimated == 'false') {echo "";} else {
 }
 .user:hover {
 	 background-color: <?php echo $hover; ?>;
-	 
-  <?php
-	//This code is wildly broken... good luck fixing (it dosent sync the colors to the background)
-	// if ($bgIsAnimated == 'false'){ echo "background-color:"; echo $hover; echo ";";}
-	//	else {
-	//  echo "background-color:"; echo '-webkit-animation-name: cycle-banner-btn; /* Chrome, Safari, Opera */ -webkit-animation-duration: 15s; /* Chrome, Safari, Opera */ -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */ animation-name: cycle-banner-btn; animation-duration: 15s; animation-iteration-count: infinite;'; echo ";"; } ?> */
-	
-	
     color: #FFFFFF;
 }
 a {

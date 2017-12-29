@@ -54,3 +54,6 @@ if ($bgIsAnimated == 'false') {echo "";} else {
 a {
 	color:<?php echo $color; ?>;
 }
+a.dcc:hover {
+    color: <?php echo $color; ?>;
+}

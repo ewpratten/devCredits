@@ -8,6 +8,12 @@ a:hover{
 	text-decoration: none;
 	color:white;
 }
+.dc {
+	text-align:right;
+}
+a.dcc {
+    color: #e0e0e0;
+}
 h1 {
 	font-weight: normal;
    	color: #54556E;

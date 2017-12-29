@@ -4,11 +4,7 @@ php:
   - '7.1'
   - hhvm # on Trusty only
   - nightly
-jobs:
-  include:
-    - stage: index
-      script: php -l index.php
-    - stage: style
-      script: php -l style.php
-    - stage: userprofile
-      script: php -l api/userprofile.php
+scrpit:
+  - php -l index.php
+  - php -l style.php
+  - php -l api/userprofile.php

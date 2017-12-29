@@ -14,7 +14,7 @@ if (isset($_GET["color"])) {
 	$cin = 1;
 }
 
-session_start(); 
+session_start();
 $_SESSION['mainColor'] = $cin;
 
 if (isset($_GET["users"])) {
@@ -47,7 +47,7 @@ $users = explode(",", $uservar);
 
 <body>
 
-<div class="flex one three-600 demo">
+<div class="flex one three-1000 demo">
 	<div><span></span></div>
 	<div class="maincard">
 			<h1><?php echo $title ?></h1>

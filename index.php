@@ -13,6 +13,7 @@ if (isset($_GET["color"])) {
 } else {
 	$cin = 1;
 }
+
 session_start(); 
 $_SESSION['mainColor'] = $cin;
 
@@ -38,9 +39,10 @@ $users = explode(",", $uservar);
 <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="style.css">
-	
+
 <!-- Use set color to dynamically change the theme -->
 <link rel="stylesheet" type="text/css" href="style.php">
+
 </head>
 
 <body>

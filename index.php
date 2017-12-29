@@ -5,6 +5,11 @@ if (isset($_GET["title"])) {
 } else {
 	$title = "devCredits";
 }
+if (isset($_GET["animation"])) {
+	$bgIsAnimated = htmlspecialchars($_GET["animation"]);
+} else {
+	$bgIsAnimated = "false";
+}
 if (isset($_GET["subtext"])) {
 	$stext = htmlspecialchars($_GET["subtext"]);
 } else {
@@ -17,6 +22,7 @@ if (isset($_GET["color"])) {
 }
 session_start();
 $_SESSION['mainColor'] = $cin;
+$_SESSION['bgIsAnimated'] = $bgIsAnimated;
 if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
 	$uservar = str_replace(" ", "", $uservar);

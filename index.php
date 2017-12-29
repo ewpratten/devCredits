@@ -57,11 +57,11 @@ $users = explode(",", $uservar);
 
 <body>
 
-
+<div class="container container-fluid">
 	<div class="row">
 	  <div class=" mx-auto">
-	    <div class="card col-md-12 col-sm-4 col-xs-4">
-	      <div class="card-body mx-auto">
+	    <div class="card maincard col-ldg-12 col-md-12 col-sm-12 col-xs-12">
+	      <div class="card-body">
 	        <h1 class="card-title text-center"><?php echo $title ?></h1>
 	        <div class="card-text text-center">
 	        	<?php echo $stext; ?>
@@ -81,7 +81,7 @@ $users = explode(",", $uservar);
 	    </div>
 	  </div>
 	</div>
-
+</div>
 <!-- OLD CARD BACKUP -->
 <!-- <div class="flex one three-1000 demo">
 	<div><span></span></div>

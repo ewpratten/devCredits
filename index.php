@@ -34,7 +34,7 @@ if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
 	$uservar = str_replace(" ", "", $uservar);
 } else {
-	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview";
+	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,Jay97";
 }
 $users = explode(",", $uservar);
 

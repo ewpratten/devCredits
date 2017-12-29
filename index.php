@@ -106,6 +106,7 @@ $users = explode(",", $uservar);
 	  </div>
 	</div>
 </div>
+<div class="avatar"><img src="https://devrant.com/static/devrant/img/devrant-header-developer.png"></div>
 <!-- OLD CARD BACKUP -->
 <!-- <div class="flex one three-1000 demo">
 	<div><span></span></div>

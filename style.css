@@ -41,6 +41,11 @@ hr {
 .card {
 	border-radius: 10px;
 }
+.avatar {
+	position: absolute;
+right: 0px;
+bottom: 0px;
+}
 h4 {
 	font-weight: light;
    	color: #54556E;

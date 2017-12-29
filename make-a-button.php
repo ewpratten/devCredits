@@ -26,6 +26,8 @@ $_SESSION['mainColor'] = $cin;
 
 <?php
 	
+	$boots = "<p>The button requires <a href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css'>bootstrap</a></p>";
+	
 	$generated = false;
 	$validLink;
 	$buttonText;
@@ -34,7 +36,7 @@ $_SESSION['mainColor'] = $cin;
 	$hrefValue;
 	if(isset($_GET['link']))
 	{
-		$link = $_GET['link'];		
+		$link = $_GET['link'];
 	}
 	if(isset($_POST['generate']))
 	{
@@ -81,52 +83,60 @@ $_SESSION['mainColor'] = $cin;
 
 	function button($link, $buttonText,$color, $size)
 	{
-		switch ($color) 
+		switch ($color)
     	{
     		case 'dark': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-dark <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots; ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-dark <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'blue': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-primary <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-primary <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'red': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-danger <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-danger <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'green': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-success <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-success <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'grey': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-secondary btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-secondary <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'orange': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-warning <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-warning <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
 
     		case 'white': ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-light <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-white <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
     		
     		default: ?>
     			<xmp><a href="<?php echo $link; ?>" class="btn btn-outline-dark <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+    			<?php echo $boots ?>
 	        	<p>Your button will look like this</p><br/>
 	        	<a href="<?php echo $link; ?>" class="btn btn-outline-dark <?php echo $size; ?>" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
     			<?php break;
@@ -221,16 +231,16 @@ $_SESSION['mainColor'] = $cin;
 		        <div class="generated-content text-center">
 		        	<code>Paste the following code in your html to get your button working</code>
 		        	<?php
-		        	button($hrefValue, $buttonText,$buttonColor,$buttonSize); 
-		        	?>		        	
+		        	button($hrefValue, $buttonText,$buttonColor,$buttonSize);
+		        	?>
 		        	<br/>
 		        </div>
 		    <?php endif; ?>
 		     <?php endif; ?>
 	      </div>
 	    </div>
-	  </div>	
-	</div>	
+	  </div>
+	</div>
 </div>
 
 

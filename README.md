@@ -24,11 +24,11 @@ subtext=<add your subtext here, leave blank for none, use link below for formatt
 ```
 text to url converter: https://meyerweb.com/eric/tools/dencoder/
 ### Todo
-- [.] allow configuration of background color from link
+- [X] allow configuration of background color from link
 - [ ] add profile images to the page
 - [ ] a collection "devRant community project" banners and embeds for your project site
 - [ ] embedable buttons that link to credits page
-- [.] better mobile version
+- [X] better mobile version
 - [ ] background images
 - [ ] clean up unused files
 - [ ] test if user exsists before displaying name

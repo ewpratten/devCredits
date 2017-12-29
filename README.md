@@ -1,4 +1,4 @@
-# devCredits
+# devCredits [![Build Status](https://travis-ci.org/Ewpratten/devCredits.svg?branch=master)](https://travis-ci.org/Ewpratten/devCredits)
 A simple way to make a credits page for any devRant community projects
 ### How to use
 The entire site is link based <br>

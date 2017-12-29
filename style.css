@@ -24,7 +24,7 @@ h1 {
 	padding: 0;
 }
 hr {
-	background-color:#54556E;
+	background-color:#54556E !important;
 	width:96%;
 }
 h4 {

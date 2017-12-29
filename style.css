@@ -18,11 +18,6 @@ h1 {
 	text-align: center;
 	word-wrap: break-word;
 }
-.user:hover {
-	background-color:#2a8b9d;
-	font-weight: normal;
-    color: #FFFFFF;
-}
 .user {
 	margin: 2%;
 	border-radius: 5px;
@@ -31,7 +26,4 @@ h1 {
 hr {
 	background-color:#54556E;
 	width:96%;
-}
-*{
-	
 }

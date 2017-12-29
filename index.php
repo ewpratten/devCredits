@@ -101,7 +101,7 @@ $users = explode(",", $uservar);
 				<?php endforeach; ?>
 				
 	      </div>
-	      <div class="dc"><a href="" class="dcc">devCredits</a></div>
+	      <div class="dc"><a href="https://devcredits.herokuapp.com/" class="dcc">devCredits</a></div>
 	    </div>
 	  </div>
 	</div>

@@ -33,3 +33,13 @@ h4 {
    	font-family: Comfortaa;
    	padding:0;
 }
+
+
+.generated-content, .input-content
+{
+	padding:20px;
+	margin-top:30px;
+	margin-bottom:10px;
+	border:1px solid #54556E;
+	border-radius: 4px;
+}

@@ -18,7 +18,7 @@ if (isset($_GET["subtext"])) {
 if (isset($_GET["color"])) {
 	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
 } else {
-	$cin = 1;
+	$cin = 2;
 }
 session_start();
 $_SESSION['mainColor'] = $cin;
@@ -30,6 +30,27 @@ if (isset($_GET["users"])) {
 	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,jay97";
 }
 $users = explode(",", $uservar);
+
+/* if youget some err or users don't show
+   that means that the host (herokuapp)
+   doesn't have curl installd */
+function user_exists($username) {
+	$url="https://devrant.com/users/$username";
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_TIMEOUT, '60'); // in seconds
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt($ch, CURLOPT_NOBODY, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $res = curl_exec($ch);
+    // devRant.com reditrect to its homepage if user doesn't exist
+    if(curl_getinfo($ch)['url'] == $url){
+        return 1;
+    } return 0;
+}
+
 ?>
 <!DOCTYPE html>
 <head>
@@ -46,7 +67,7 @@ $users = explode(",", $uservar);
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="/style.css">
 
@@ -62,21 +83,23 @@ $users = explode(",", $uservar);
 	  <div class=" mx-auto">
 	    <div class="card col-md-12 col-sm-4 col-xs-4">
 	      <div class="card-body mx-auto">
-	        <h1 class="card-title text-center"><?php echo $title ?></h1>
+	        <h1 class="card-title text-center"><?=$title ?></h1>
 	        <div class="card-text text-center">
-	        	<?php echo $stext; ?>
+	        	<?=$stext; ?>
 	        </div>
 	        <div class="credits card-text text-center">
 	        	Made with <i class="fa fa-heart"></i> by
 	        </div>
 	        <hr/>
-	        <?php foreach ($users as $user):?>
+<?php foreach ($users as $user):?>
+<?php if (user_exists($user)):?>
 				<a href='https://devrant.com/users/<?=$user?>'>
 					<div class='user'>
 						<h2><?=$user?></h2>
 					</div>
 				</a>
-			<?php endforeach; ?>
+<?php endif; ?>
+<?php endforeach; ?>
 	      </div>
 	    </div>
 	  </div>

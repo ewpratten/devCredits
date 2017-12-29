@@ -1,0 +1,140 @@
+==================================================================
+https://keybase.io/ewpratten
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://devcredits.herokuapp.com
+  * I am ewpratten (https://keybase.io/ewpratten) on keybase.
+  * I have a public key with fingerprint DD15 BE72 F652 984A ED9E  C033 56F5 A6FB 5A8E EF90
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010160a7afd6a7099e5079470c930b62e422a3f4b8a0c08482c174e5356f23b7b66f0a",
+      "fingerprint": "dd15be72f652984aed9ec03356f5a6fb5a8eef90",
+      "host": "keybase.io",
+      "key_id": "56f5a6fb5a8eef90",
+      "kid": "010160a7afd6a7099e5079470c930b62e422a3f4b8a0c08482c174e5356f23b7b66f0a",
+      "uid": "bffaefed9cc265096ca9aec784253419",
+      "username": "ewpratten"
+    },
+    "service": {
+      "hostname": "devcredits.herokuapp.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1514508226,
+  "expire_in": 157680000,
+  "prev": "d7b0d05bd385b3f58de6dd953b031aebcf881b55be8159c8403160cf027bcf0d",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMJBAnicrVJdTBRXFN51RVwUS1xJWxOjjKQ+iJs7P3d+lpK0VIKm8kBS6w+Wzf05
+AwPszDg7CxICBWtiW5OSFHzwpQ01RjRNTHlqxQAqDYoJUZsa40+A/qQljbYPpklj
+2/QO0Tcfe19u7jnf953vnHumSxOxkvjQlz01xal3v4vfuHymEDtYN3ilR6Ie75Yy
+PVI7LF/QwSEfZtsdLmUkJCNZR8QgNteJgSwLMDIszUDMUhHVFdAUhai2Rk2CGDI1
+U2GyoQFWsW4rKjWortuISFWS7bgtEPiB44ZClnMZUzAUW8eKZWoEuAUMqRELE92m
+mJgAtoUEsdXLRwxhjpI8pB1PxMQju2zvBfj/2XdhWY7aNgFbuGRM0TGydEYsAsww
+NQWrmmxFwDwELsmBQEOXH5AwBFfqrZJEuNNhEE02auUZhEMnC4A7YT7dCoHXXiC+
+n2ZeTgj5gRd6zOsQqNYw9POZSCXs9iNaF9DsM8EsdVwuhioYnRDkHc+VMrJAstCJ
+KshY1jAyFUWvkuCI7wSQdSIENnQTiRPVgc7IiUERR5hy1cRUtbHJQefcwipFqkyA
+Mts0ZYrFd5kytpipibCOmI0UQ+QQl6IWD7uelFEM4ZO0CM280+KSsBCA1Htl6tDK
+WLwktqpoRbRtsZJk2fMdfLV6dez0padz259m9tXPw4rTtfWjO4YnT5aW/5jEbW0L
+FeNli+kcrJ0q++bS7J735pcubP5t6PXmoWld/mdkzdwfFa0lW6s/5sN///u2m9w1
++vjl1+Kpe+TE92O/dKeK3ylaLCSfzP/eV/nK1S2DY+NTfSM/J/uG3/zr89njTXdn
+X6q79kb50pPEAD2ysaFo6H5T+Gg299HOT5bqutbVFg/0T/ZvWnlsY/r6w7nH9dmZ
+isG3Dq/1Pz0//tmpq+8fL99QeuvBF9mz018dS9xpeZRcP/Hh3ds98bE2pzFReqtp
+8FzN3vbK/T+wbPVCbs2fqZGJ3Zsv1nb82jy/b+bAzZ+2ebnGo3Pf2l831J/4IPYf
+eytA1g==
+=A+Tw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ewpratten
+
+==================================================================
+
+=======
+==================================================================
+https://keybase.io/ewpratten
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://devcredits.herokuapp.com
+  * I am ewpratten (https://keybase.io/ewpratten) on keybase.
+  * I have a public key with fingerprint DD15 BE72 F652 984A ED9E  C033 56F5 A6FB 5A8E EF90
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010160a7afd6a7099e5079470c930b62e422a3f4b8a0c08482c174e5356f23b7b66f0a",
+      "fingerprint": "dd15be72f652984aed9ec03356f5a6fb5a8eef90",
+      "host": "keybase.io",
+      "key_id": "56f5a6fb5a8eef90",
+      "kid": "010160a7afd6a7099e5079470c930b62e422a3f4b8a0c08482c174e5356f23b7b66f0a",
+      "uid": "bffaefed9cc265096ca9aec784253419",
+      "username": "ewpratten"
+    },
+    "service": {
+      "hostname": "devcredits.herokuapp.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1514508226,
+  "expire_in": 157680000,
+  "prev": "d7b0d05bd385b3f58de6dd953b031aebcf881b55be8159c8403160cf027bcf0d",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMJBAnicrVJdTBRXFN51RVwUS1xJWxOjjKQ+iJs7P3d+lpK0VIKm8kBS6w+Wzf05
+AwPszDg7CxICBWtiW5OSFHzwpQ01RjRNTHlqxQAqDYoJUZsa40+A/qQljbYPpklj
+2/QO0Tcfe19u7jnf953vnHumSxOxkvjQlz01xal3v4vfuHymEDtYN3ilR6Ie75Yy
+PVI7LF/QwSEfZtsdLmUkJCNZR8QgNteJgSwLMDIszUDMUhHVFdAUhai2Rk2CGDI1
+U2GyoQFWsW4rKjWortuISFWS7bgtEPiB44ZClnMZUzAUW8eKZWoEuAUMqRELE92m
+mJgAtoUEsdXLRwxhjpI8pB1PxMQju2zvBfj/2XdhWY7aNgFbuGRM0TGydEYsAsww
+NQWrmmxFwDwELsmBQEOXH5AwBFfqrZJEuNNhEE02auUZhEMnC4A7YT7dCoHXXiC+
+n2ZeTgj5gRd6zOsQqNYw9POZSCXs9iNaF9DsM8EsdVwuhioYnRDkHc+VMrJAstCJ
+KshY1jAyFUWvkuCI7wSQdSIENnQTiRPVgc7IiUERR5hy1cRUtbHJQefcwipFqkyA
+Mts0ZYrFd5kytpipibCOmI0UQ+QQl6IWD7uelFEM4ZO0CM280+KSsBCA1Htl6tDK
+WLwktqpoRbRtsZJk2fMdfLV6dez0padz259m9tXPw4rTtfWjO4YnT5aW/5jEbW0L
+FeNli+kcrJ0q++bS7J735pcubP5t6PXmoWld/mdkzdwfFa0lW6s/5sN///u2m9w1
++vjl1+Kpe+TE92O/dKeK3ylaLCSfzP/eV/nK1S2DY+NTfSM/J/uG3/zr89njTXdn
+X6q79kb50pPEAD2ysaFo6H5T+Gg299HOT5bqutbVFg/0T/ZvWnlsY/r6w7nH9dmZ
+isG3Dq/1Pz0//tmpq+8fL99QeuvBF9mz018dS9xpeZRcP/Hh3ds98bE2pzFReqtp
+8FzN3vbK/T+wbPVCbs2fqZGJ3Zsv1nb82jy/b+bAzZ+2ebnGo3Pf2l831J/4IPYf
+eytA1g==
+=A+Tw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ewpratten
+
+==================================================================

@@ -1,39 +1,48 @@
 <?php
-$title = $_GET["title"];
-$cin = $_GET['color'];
-$uservar = $_GET["users"];
-if ($uservar == null) {
-	$uservar = "ewpratten,linuxxx,404response,thatdude";
-}
-$users = explode(",", $uservar);
-
-if ($title == null) {
-	$title = "devCredits";
-}
-if ($cin == null) {
-	$cin = 1;
-}
 
 // /api/userprofile.php/?username=
 
-//colors:
-//1 - purple
-//2 - green
-//3 - blue
-//4 - red
-//5 - yellow
-//6 - orange
+if (isset($_GET["title"])) {
+	$title = htmlspecialchars($_GET["title"]);
+} else {
+	$title = "devCredits";
+}
 
-if ($cin == 1) { $color = "#a872a3"; }
-if ($cin == 2) { $color = "#7cc8a2"; }
-if ($cin == 3) { $color = "#2a8b9d"; }
-if ($cin == 4) { $color = "#d55161"; }
-if ($cin == 5) { $color = "#ecd175"; }
-if ($cin == 6) { $color = "#f99a66"; }
+if (isset($_GET["subtext"])) {
+	$stext = htmlspecialchars($_GET["subtext"]);
+} else {
+	$stext = "An easy way to credit people from the devRant community";
+}
+
+if (isset($_GET["color"])) {
+	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
+} else {
+	$cin = 1;
+}
+
+if (isset($_GET["animation"])) {
+	$bgIsAnimated = htmlspecialchars($_GET["animation"]);
+} else {
+	$bgIsAnimated = "false";
+}
+
+session_start();
+$_SESSION['mainColor'] = $cin;
+$_SESSION['bgIsAnimated'] = $bgIsAnimated;
+
+if (isset($_GET["users"])) {
+	$uservar =  htmlspecialchars($_GET["users"]);
+	$uservar = str_replace(" ", "", $uservar);
+} else {
+	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,Jay97";
+}
+$users = explode(",", $uservar);
+
 ?>
+<!DOCTYPE html>
 <head>
-<title>devCredits - <?php echo $title ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devCredits - <?=$title ?></title>
 <meta name="description" content="An easy way to make a credits page for devRant community projects">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">
 <link href="https://unpkg.com/picnic" rel="stylesheet">
@@ -43,23 +52,30 @@ if ($cin == 6) { $color = "#f99a66"; }
 <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="style.css">
-<style>body {background-color:<?php echo $color ?>; }</style>
+
+<!-- Use set color to dynamically change the theme -->
+<link rel="stylesheet" type="text/css" href="style.php">
+
 </head>
 
 <body>
 
-<div class="flex one three-600 demo">
+<div class="flex one three-1000 demo">
 	<div><span></span></div>
 	<div class="maincard">
 			<h1><?php echo $title ?></h1>
+			<h4><?php echo $stext ?></h4>
+			<br />
 			<div class="credits">Made with &#9825; by</div>
 			<hr />
 			<div class="flex two demo">
-				<?php
-				for ($i = 0; $i < count($users); $i++) {
-					echo  '<a href="https://devrant.com/users/'; echo $users[$i]; echo '"><div class="user"><span><h2>'; echo $users[$i]; echo '</h2></span></div></a>';
-				}
-				?>
+<?php foreach ($users as $user):?>
+				<a href='https://devrant.com/users/<?=$user?>'>
+					<div class='user'>
+						<span><h2><?=$user?></h2></span>
+					</div>
+				</a>
+<?php endforeach; ?>
 			</div>
 		</div>
 </div>

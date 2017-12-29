@@ -8,6 +8,12 @@ if (isset($_GET["title"])) {
 	$title = "devCredits";
 }
 
+if (isset($_GET["subtext"])) {
+	$stext = htmlspecialchars($_GET["subtext"]);
+} else {
+	$stext = "An easy way to credit people from the devRant community";
+}
+
 if (isset($_GET["color"])) {
 	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
 } else {
@@ -51,6 +57,8 @@ $users = explode(",", $uservar);
 	<div><span></span></div>
 	<div class="maincard">
 			<h1><?php echo $title ?></h1>
+			<h4><?php echo $stext ?></h4>
+			<br />
 			<div class="credits">Made with &#9825; by</div>
 			<hr />
 			<div class="flex two demo">

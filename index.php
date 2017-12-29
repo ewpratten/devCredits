@@ -2,21 +2,6 @@
 
 // /api/userprofile.php/?username=
 
-//colors:
-//1 - purple
-//2 - green
-//3 - blue
-//4 - red
-//5 - yellow
-//6 - orange
-
-$colors = array(1 => '#a872a3',
-				2 => '#7cc8a2',
-				3 => '#2a8b9d',
-				4 => '#d55161',
-				5 => '#ecd175',
-				6 => '#f99a66');
-
 if (isset($_GET["title"])) {
 	$title = htmlspecialchars($_GET["title"]);
 } else {
@@ -29,11 +14,8 @@ if (isset($_GET["color"])) {
 	$cin = 1;
 }
 
-if (array_key_exists($cin, $colors)) {
-	$color = $colors[$cin];
-} else {
-	$color = $colors[1];
-}
+session_start(); 
+$_SESSION['mainColor'] = $cin;
 
 if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
@@ -57,7 +39,10 @@ $users = explode(",", $uservar);
 <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="style.css">
-<style>body {background-color:<?=$color?>; }</style>
+
+<!-- Use set color to dynamically change the theme -->
+<link rel="stylesheet" type="text/css" href="style.php">
+
 </head>
 
 <body>

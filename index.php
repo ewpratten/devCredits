@@ -46,6 +46,7 @@ $users = explode(",", $uservar);
 ?>
 <!DOCTYPE html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>devCredits - <?=$title ?></title>
 <meta name="description" content="An easy way to make a credits page for devRant community projects">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">

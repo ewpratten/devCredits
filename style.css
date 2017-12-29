@@ -29,7 +29,7 @@ h1 {
 	text-align:center;
 }
 hr {
-	background-color:#54556E;
+	background-color:#54556E !important;
 	width:96%;
 }
 .card {

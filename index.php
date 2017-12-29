@@ -20,8 +20,15 @@ if (isset($_GET["color"])) {
 	$cin = 1;
 }
 
+if (isset($_GET["animation"])) {
+	$bgIsAnimated = htmlspecialchars($_GET["animation"]);
+} else {
+	$bgIsAnimated = "false";
+}
+
 session_start();
 $_SESSION['mainColor'] = $cin;
+$_SESSION['bgIsAnimated'] = $bgIsAnimated;
 
 if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);

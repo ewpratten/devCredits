@@ -4,3 +4,7 @@ php:
   - '7.1'
   - hhvm # on Trusty only
   - nightly
+script:
+  - php -l index.php
+  - php -l style.php
+  - php -l api/userprofile.php

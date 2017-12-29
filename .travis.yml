@@ -7,8 +7,8 @@ php:
 jobs:
   include:
     - stage: index
-      php -l index.php
+      script: php -l index.php
     - stage: style
-      php -l style.php
+      script: php -l style.php
     - stage: userprofile
-      php -l api/userprofile.php
+      script: php -l api/userprofile.php

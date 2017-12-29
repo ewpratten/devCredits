@@ -25,6 +25,9 @@ if (isset($_GET["users"])) {
 }
 $users = explode(",", $uservar);
 
+/* if youget some err or users don't show
+   that means that the host (herokuapp)
+   doesn't have curl installd */
 function user_exists($username) {
 	$url="https://devrant.com/users/$username";
     $ch = curl_init();

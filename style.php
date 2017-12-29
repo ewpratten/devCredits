@@ -33,6 +33,7 @@
 		$color = $colors[1];
 		$hover = $hoverc[0];
 	}
+	//
 	//templates from coolors.co
 	
 	//use $color to create themes

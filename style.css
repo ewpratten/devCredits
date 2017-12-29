@@ -4,6 +4,16 @@ body {
 	font-weight: normal;
 	margin:0;
 }
+a:hover{
+	text-decoration: none;
+	color:white;
+}
+.dc {
+	text-align:right;
+}
+a.dcc {
+    color: #e0e0e0;
+}
 h1 {
 	font-weight: normal;
    	color: #54556E;
@@ -20,10 +30,111 @@ h1 {
 }
 .user {
 	margin: 2%;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 0;
+	text-align:center;
 }
 hr {
-	background-color:#54556E;
+	background-color:#54556E !important;
 	width:96%;
+}
+.card {
+	border-radius: 10px;
+}
+.avatar {
+	position: absolute;
+right: 0px;
+bottom: 0px;
+}
+h4 {
+	font-weight: light;
+   	color: #54556E;
+   	font-family: Comfortaa;
+   	padding:0;
+}
+@-webkit-keyframes cycle-banner {
+	    0%   {
+	    		background-color: #A973A2;
+	    	}
+	    25%   {
+	    		background-color: #A973A2;
+	    	}
+	    31%   {
+	    		background-color: #7BC8A4;
+	    	}
+	    60%   {
+	    		background-color: #7BC8A4;
+	    	}
+	    66%   {
+	    		background-color: #F99A66;
+	    	}
+	    94%  {
+	    		background-color: #F99A66;
+	    	}
+	}
+	
+	/* Standard syntax */
+	@keyframes cycle-banner {
+	    0%   {
+	    		background-color: #A973A2;
+	    	}
+	    25%   {
+	    		background-color: #A973A2;
+	    	}
+	    31%   {
+	    		background-color: #7BC8A4;
+	    	}
+	    60%   {
+	    		background-color: #7BC8A4;
+	    	}
+	    66%   {
+	    		background-color: #F99A66;
+	    	}
+	    94%  {
+	    		background-color: #F99A66;
+	    	}
+	}
+	
+	/* Chrome, Safari, Opera */
+@-webkit-keyframes cycle-banner-btn {
+    0%   {
+    		background-color: #f99a66;
+    	}
+    25%   {
+    		background-color: #f99a66;
+    	}
+    31%   {
+    		background-color: #2A8B9D;
+    	}
+    60%   {
+    		background-color: #2A8B9D;
+    	}
+    66%   {
+    		background-color: #D55161;
+    	}
+    94%  {
+    		background-color: #D55161;
+    	}
+}
 
+/* Standard syntax */
+@keyframes cycle-banner-btn {
+    0%   {
+    		background-color: #f99a66;
+    	}
+    25%   {
+    		background-color: #f99a66;
+    	}
+    31%   {
+    		background-color: #2A8B9D;
+    	}
+    60%   {
+    		background-color: #2A8B9D;
+    	}
+    66%   {
+    		background-color: #D55161;
+    	}
+    94%  {
+    		background-color: #D55161;
+    	}
+}

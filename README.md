@@ -1,18 +1,40 @@
-# devCredits
+# devCredits [![Build Status](https://travis-ci.org/Ewpratten/devCredits.svg?branch=master)](https://travis-ci.org/Ewpratten/devCredits) [![GitHub pull requests](https://img.shields.io/github/issues-pr/Ewpratten/devCredits.svg)]() [![GitHub issues](https://img.shields.io/github/issues/Ewpratten/devCredits.svg)]() [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Ewpratten/devCredits.svg)]()
 A simple way to make a credits page for any devRant community projects
+## note to contributers
+If you add any new php file, also add the respective command to .travis.yml
+```
+php -l <path/file name>
+```
 ### How to use
-just replace parts of the link with what you want
+The entire site is link based <br>
+First, start with the base link.
 ```
-https://devcredits.herokuapp.com/?title=devCredits&users=ewpratten,linuxxx,404response,thatdude
+https://devcredits.herokuapp.com/?
 ```
-*title*: the title at the top of the page
+then, add details
+```
+background color:
+color=1 - purple
+color=2 - green
+color=3 - blue
+color=4 - red
+color=5 - yellow
+color=6 - orange
 
-*users*: an array of the users to display
+title=<your title here>
 
+names=<usernames, comma seperated, no spaces>
+
+subtext=<add your subtext here, leave blank for none, use link below for formatting>
+```
+text to url converter: https://meyerweb.com/eric/tools/dencoder/
 ### Todo
-- [ ] allow configuration of background color from link
+- [X] allow configuration of background color from link
 - [ ] add profile images to the page
 - [ ] a collection "devRant community project" banners and embeds for your project site
 - [ ] embedable buttons that link to credits page
-- [ ] better mobile version
+- [X] better mobile version
 - [ ] background images
+- [ ] clean up unused files
+- [ ] test if user exsists before displaying name
+- [ ] profile photo api?

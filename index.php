@@ -27,9 +27,28 @@ if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
 	$uservar = str_replace(" ", "", $uservar);
 } else {
-	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,jay97";
+	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview";
 }
 $users = explode(",", $uservar);
+
+?>
+
+<?php
+	
+	$generated = false;
+	$buttonText;
+	$buttonColor;
+	if(isset($_POST['generate']))
+	{
+		$generated = true;
+
+		if(!empty($_POST['button-text'] && $_POST['button-color']))
+		{
+			$buttonText = $_POST['button-text'];
+			$buttonColor = $_POST['button-color'];
+		}
+
+	}
 
 ?>
 <!DOCTYPE html>
@@ -58,8 +77,7 @@ $users = explode(",", $uservar);
 
 <body>
 
-
-<div class="container container-fluid">
+<div class="container ">
 	<div class="row">
 	  <div class=" mx-auto">
 	    <div class="card maincard col-ldg-12 col-md-12 col-sm-12 col-xs-12">
@@ -68,6 +86,93 @@ $users = explode(",", $uservar);
 	        <div class="card-text text-center">
 	        	<?php echo $stext; ?>
 	        </div>
+	        
+	        <div class="form-control input-content">
+	        	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+	        		<div class="row">
+					  <div class="col">
+					  	<label for="button-text">Button title</label>
+					    <input type="text" class="form-control" id="button-text" name="button-text" aria-describedby="button-text-help" placeholder="Enter text" required>
+					    <small id="button-text-help" class="form-text text-muted">Enter the text that you want on your button</small>
+					  </div>
+					  <div class="col">
+					  	<label for="button-color">Choose color</label>
+					    <select class="form-control" id="button-color" name="button-color" required>
+					      <option value=""> -- Choose color -- </option>
+					      <option value="dark">Dark</option>
+					      <option value="blue">Blue</option>
+					      <option value="red">Red</option>
+					      <option value="green">Green</option>
+					      <option value="grey">Grey</option>
+					      <option value="orange">Orange</option>
+					      <option value="white">White</option>
+					    </select>
+					  </div>
+	        			
+	        		</div>
+				  <input type="submit" name="generate" class="btn btn-dark" value="Generate"/>
+				</form>
+	        </div>
+
+	        <?php if($generated): ?>
+		        <div class="generated-content text-center">
+		        	<code>Paste the following code in your html to get your button working</code>
+		        	<?php switch ($buttonColor) 
+		        	{
+		        		case 'dark': ?>
+		        			<xmp><a href="#" class="btn btn-outline-dark btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-dark btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'blue': ?>
+		        			<xmp><a href="#" class="btn btn-outline-primary btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-primary btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'red': ?>
+		        			<xmp><a href="#" class="btn btn-outline-danger btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-danger btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'green': ?>
+		        			<xmp><a href="#" class="btn btn-outline-success btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-success btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'grey': ?>
+		        			<xmp><a href="#" class="btn btn-outline-secondary btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-secondary btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'orange': ?>
+		        			<xmp><a href="#" class="btn btn-outline-warning btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-warning btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+
+		        		case 'white': ?>
+		        			<xmp><a href="#" class="btn btn-outline-light btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-white btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+		        		
+		        		default: ?>
+		        			<xmp><a href="#" class="btn btn-outline-dark btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a></xmp>
+				        	<p>Your button will look like this</p><br/>
+				        	<a href="#" class="btn btn-outline-dark btn-lg" role="button" aria-disabled="true"><?php echo $buttonText; ?></a>
+		        			<?php break;
+		        	} ?>
+		        	
+		        	<br/>
+		        </div>
+		     <?php endif; ?>
+
+
 	        <div class="credits card-text text-center">
 	        	Made with <i class="fa fa-heart"></i> by
 	        </div>
@@ -84,6 +189,7 @@ $users = explode(",", $uservar);
 	  </div>	
 	</div>	
 </div>
+
 
 <!-- <div class="flex one three-1000 demo">
 	<div><span></span></div>

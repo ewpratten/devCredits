@@ -8,3 +8,4 @@ script:
   - php -l index.php
   - php -l style.php
   - php -l api/userprofile.php
+  - php -l make-a-button.php

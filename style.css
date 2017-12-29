@@ -4,6 +4,10 @@ body {
 	font-weight: normal;
 	margin:0;
 }
+a:hover{
+	text-decoration: none;
+	color:white;
+}
 h1 {
 	font-weight: normal;
    	color: #54556E;
@@ -22,6 +26,7 @@ h1 {
 	margin: 2%;
 	border-radius: 5px;
 	padding: 0;
+	text-align:center;
 }
 hr {
 	background-color:#54556E;

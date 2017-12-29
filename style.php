@@ -71,3 +71,6 @@ if ($bgIsAnimated == 'false') {echo "";} else {
 	
     color: #FFFFFF;
 }
+a {
+	color:<?php echo $color; ?>;
+}

@@ -1,43 +1,29 @@
 <?php
-
 // /api/userprofile.php/?username=
-
 if (isset($_GET["title"])) {
 	$title = htmlspecialchars($_GET["title"]);
 } else {
 	$title = "devCredits";
 }
-
 if (isset($_GET["subtext"])) {
 	$stext = htmlspecialchars($_GET["subtext"]);
 } else {
 	$stext = "An easy way to credit people from the devRant community";
 }
-
 if (isset($_GET["color"])) {
 	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
 } else {
 	$cin = 1;
 }
-
-if (isset($_GET["animation"])) {
-	$bgIsAnimated = htmlspecialchars($_GET["animation"]);
-} else {
-	$bgIsAnimated = "false";
-}
-
 session_start();
 $_SESSION['mainColor'] = $cin;
-$_SESSION['bgIsAnimated'] = $bgIsAnimated;
-
 if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
 	$uservar = str_replace(" ", "", $uservar);
 } else {
-	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,Jay97";
+	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,jay97";
 }
 $users = explode(",", $uservar);
-
 ?>
 <!DOCTYPE html>
 <head>
@@ -51,7 +37,12 @@ $users = explode(",", $uservar);
 <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
 <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/style.css">
 
 <!-- Use set color to dynamically change the theme -->
 <link rel="stylesheet" type="text/css" href="style.php">
@@ -60,7 +51,33 @@ $users = explode(",", $uservar);
 
 <body>
 
-<div class="flex one three-1000 demo">
+
+	<div class="row">
+	  <div class=" mx-auto">
+	    <div class="card col-md-12 col-sm-4 col-xs-4">
+	      <div class="card-body mx-auto">
+	        <h1 class="card-title text-center"><?php echo $title ?></h1>
+	        <div class="card-text text-center">
+	        	<?php echo $stext; ?>
+	        </div>
+	        <div class="credits card-text text-center">
+	        	Made with <i class="fa fa-heart"></i> by
+	        </div>
+	        <hr/>
+	        <?php foreach ($users as $user):?>
+				<a href='https://devrant.com/users/<?=$user?>'>
+					<div class='user'>
+						<h2><?=$user?></h2>
+					</div>
+				</a>
+			<?php endforeach; ?>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+<!-- OLD CARD BACKUP -->
+<!-- <div class="flex one three-1000 demo">
 	<div><span></span></div>
 	<div class="maincard">
 			<h1><?php echo $title ?></h1>
@@ -78,5 +95,5 @@ $users = explode(",", $uservar);
 <?php endforeach; ?>
 			</div>
 		</div>
-</div>
+</div> -->
 </body>

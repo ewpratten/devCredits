@@ -24,13 +24,16 @@ h1 {
 }
 .user {
 	margin: 2%;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 0;
 	text-align:center;
 }
 hr {
 	background-color:#54556E;
 	width:96%;
+}
+.card {
+	border-radius: 10px;
 }
 h4 {
 	font-weight: light;

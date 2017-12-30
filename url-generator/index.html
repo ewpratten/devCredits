@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/picnic" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>devCredits URL generator</title>
+</head>
+
+<body>
+	
+<div class="flex one three-1000 demo">
+	<div><span></span></div>
+	<div class="maincard">
+		<br />
+			<div class="credits">Generate URLs for your project credits</div>
+			<hr />
+			<div class="flex one demo">
+				<form>
+					<input id="projectname" type="text" placeholder="Project name">
+					<input id="subtext" type="text", placeholder="Subtext">
+					<input id="names" type="text", placeholder="Names,of,contributors">
+					<br />
+					<p>Theme color</p>
+					<select id="theme">
+						<option value="1">purple</option>
+						<option value="2">green</option>
+						<option value="3">blue</option>
+						<option value="4">red</option>
+						<option value="5">yellow</option>
+						<option value="6">orange</option>
+					</select>
+					<hr />
+				</form>
+			</div>
+			<div class="flex one demo">
+				<div><button class="success" onclick="generate()">DO IT</button></div>
+				<br />
+				<div id="result"></div>
+			</div>
+		</div>
+</div>
+	<script>
+		function generate(){
+			var name = getE("projectname").value
+			var sub = getE("subtext").value
+			var names = getE("names").value
+			var color0 = getE("theme")
+			var color = color0.options[color0.selectedIndex].value
+			
+			var URL = 
+				"https://devcredits.herokuapp.com/?" +
+				"color=" + color +
+				"&title=" + name +
+				"&users=" + names +
+				"&subtext=" + sub
+			getE("result").innerHTML = 
+				"<a href='" +
+				URL +
+				"' target='blank'>CLICK</a>"
+		}
+		function getE(what){
+			return document.getElementById(what)
+		}
+	</script>
+</body>
+</html>

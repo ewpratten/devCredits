@@ -1,0 +1,36 @@
+body {
+	background-color:#a872a3;
+	font-family: Comfortaa;
+	font-weight: normal;
+	margin:0;
+}
+h1 {
+	font-weight: normal;
+   	color: #54556E;
+   	font-family: Comfortaa;
+}
+.maincard {
+	background-color:#ffffff;
+	height:100%;
+	border-radius: 5px;
+	text-align: center;
+	word-wrap: break-word;
+}
+.user {
+	margin: 2%;
+	border-radius: 5px;
+	padding: 0;
+}
+hr {
+	background-color:#54556E;
+	width:96%;
+}
+h4 {
+	font-weight: light;
+   	color: #54556E;
+   	font-family: Comfortaa;
+   	padding:0;
+}
+input, input:focus, select, select:focus{
+	border: none;
+}

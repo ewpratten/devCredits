@@ -40,3 +40,4 @@ text to url converter: https://meyerweb.com/eric/tools/dencoder/
 - [ ] profile photo api?
 - [X] customizable heart from link
 - [X] add heart dropdown to link generator
+- [ ] indecator for devRant ++ members

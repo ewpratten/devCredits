@@ -38,3 +38,5 @@ text to url converter: https://meyerweb.com/eric/tools/dencoder/
 - [ ] clean up unused files
 - [ ] test if user exsists before displaying name
 - [ ] profile photo api?
+- [X] customizable heart from link
+- [X] add heart dropdown to link generator

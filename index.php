@@ -10,6 +10,11 @@ if (isset($_GET["animation"])) {
 } else {
 	$bgIsAnimated = "false";
 }
+if (isset($_GET["heart"])) {
+	$heartstyle = htmlspecialchars($_GET["heart"]);
+} else {
+	$heartstyle = "filled";
+}
 if (isset($_GET["subtext"])) {
 	$stext = htmlspecialchars($_GET["subtext"]);
 } else {
@@ -50,6 +55,12 @@ $users = explode(",", $uservar);
          return 1;
      } return 0;
  }
+ 
+ if ($heartstyle == "open") {
+ 	$hs = "fa-heart-o";
+ } else {
+ 	$hs = "fa-heart";
+ }
 ?>
 <!DOCTYPE html>
 <head>
@@ -87,7 +98,7 @@ $users = explode(",", $uservar);
 	        	<?=$stext; ?>
 	        </div>
 	        <div class="credits card-text text-center">
-	        	Made with <i class="fa fa-heart"></i> by
+	        	Made with <i class="fa <?=$hs; ?>"></i> by
 	        </div>
 	        <hr/>
 	      	<?php foreach ($users as $user):?>

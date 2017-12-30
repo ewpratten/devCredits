@@ -29,6 +29,11 @@
 						<option value="5">yellow</option>
 						<option value="6">orange</option>
 					</select>
+					<p>Heart Style</p>
+					<select id="heart">
+						<option value="closed">filled</option>
+						<option value="open">unfilled</option>
+					</select>
 					<hr />
 				</form>
 			</div>
@@ -45,15 +50,18 @@
 			var sub = getE("subtext").value
 			var names = getE("names").value
 			var color0 = getE("theme")
+			var heart0 = getE("heart")
 			var color = color0.options[color0.selectedIndex].value
+			var heart = heart0.options[heart0.selectedIndex].value
 			
-			var URL = 
+			var URL =
 				"https://devcredits.herokuapp.com/?" +
 				"color=" + color +
+				"&heart=" + heart +
 				"&title=" + name +
 				"&users=" + names +
 				"&subtext=" + sub
-			getE("result").innerHTML = 
+			getE("result").innerHTML =
 				"<a href='" +
 				URL +
 				"' target='blank'>CLICK</a>"

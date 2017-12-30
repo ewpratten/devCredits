@@ -5,6 +5,9 @@ if (isset($_GET["title"])) {
 } else {
 	$title = "devCredits";
 }
+if (isset($_GET["p"])) {
+	$preset = htmlspecialchars($_GET["p"]);
+}
 if (isset($_GET["animation"])) {
 	$bgIsAnimated = htmlspecialchars($_GET["animation"]);
 } else {
@@ -32,7 +35,7 @@ if (isset($_GET["users"])) {
 	$uservar =  htmlspecialchars($_GET["users"]);
 	$uservar = str_replace(" ", "", $uservar);
 } else {
-	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,jay97";
+	$uservar = "ewpratten,utwo,linuxxx,HAlex,Bindview,jay97,hacker";
 }
 $users = explode(",", $uservar);
 
@@ -61,6 +64,10 @@ $users = explode(",", $uservar);
  } else {
  	$hs = "fa-heart";
  }
+ 
+ //preset loading code will go here
+ 
+ //end preset loading code
 ?>
 <!DOCTYPE html>
 <head>

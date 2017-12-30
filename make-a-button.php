@@ -1,6 +1,6 @@
 <?php
 
-// /api/userprofile.php/?username=
+[B// /api/userprofile.php/?username=
 
 if (isset($_GET["title"])) {
 	$title = htmlspecialchars($_GET["title"]);
@@ -80,6 +80,9 @@ $_SESSION['mainColor'] = $cin;
 			return  false;
 		}
 	}
+
+	//remove this if passing https:// through $_GET['link']
+	$link = "https://" . $link
 
 	function button($link, $buttonText,$color, $size)
 	{

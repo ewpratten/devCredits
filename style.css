@@ -42,7 +42,7 @@ hr {
 	border-radius: 10px;
 }
 .avatar {
-	position: absolute;
+	position: fixed;
 right: 0px;
 bottom: 0px;
 }

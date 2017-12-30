@@ -32,7 +32,7 @@ text to url converter: https://meyerweb.com/eric/tools/dencoder/
 - [X] allow configuration of background color from link
 - [ ] add profile images to the page
 - [ ] a collection "devRant community project" banners and embeds for your project site
-- [ ] embedable buttons that link to credits page
+- [X] embedable buttons that link to credits page
 - [X] better mobile version
 - [ ] background images
 - [ ] clean up unused files

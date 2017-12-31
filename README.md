@@ -1,6 +1,7 @@
 # devCredits [![Build Status](https://travis-ci.org/Ewpratten/devCredits.svg?branch=master)](https://travis-ci.org/Ewpratten/devCredits) [![GitHub pull requests](https://img.shields.io/github/issues-pr/Ewpratten/devCredits.svg)]() [![GitHub issues](https://img.shields.io/github/issues/Ewpratten/devCredits.svg)]() [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Ewpratten/devCredits.svg)]()
 A simple way to make a credits page for any [devRant](https://devrant.com/) community projects.
 ## Note to contributors
+to join the signal chat, email **ewpratten@tuta.io** with your phone number.
 If you add any new php file, add the respective command to `.travis.yml`, too.
 ```
 php -l <path/file name>

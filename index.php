@@ -59,6 +59,13 @@ $users = explode(",", $uservar);
      } return 0;
  }
  
+ function userispp(){
+ // check if the user is devrant ++ member. if they are, return true
+ 
+ //debug
+ return false;
+ }
+ 
  if ($heartstyle == "open") {
  	$hs = "fa-heart-o";
  } else {
@@ -128,7 +135,7 @@ $users = explode(",", $uservar);
 					<?php if (user_exists($user)):?>
 				<a href='https://devrant.com/users/<?=$user?>'>
 					<div class='user'>
-						<h2><?=$user?></h2>
+						<h2><?=$user?><?php if (userispp($user) == true) { echo ' ++'; } ?></h2>
 					</div>
 				</a>
 				<?php endif; ?>

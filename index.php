@@ -66,8 +66,23 @@ $users = explode(",", $uservar);
  }
  
  //preset loading code will go here
- 
+	if (isset($perset)) {
+		if ($_GET['m'] == "local") {
+			$root = "http://localhost:8088/?";
+		} else {
+			$root = "httpe://devcredits.herokuapp.com/?";
+		}
+
+		$presetFileContents = file_get_contents("./presets/" . $preset);
+		$rdir = $root; $rdir += $presetFileContents;
+
+		
+	}
  //end preset loading code
+ 
+ //adds ascii are banner to top of html file
+ $htmlbanner = file_get_contents("banners/asciibanner.txt");
+ echo $htmlbanner;
 ?>
 <!DOCTYPE html>
 <head>
@@ -90,7 +105,8 @@ $users = explode(",", $uservar);
 
 <!-- Use set color to dynamically change the theme -->
 <link rel="stylesheet" type="text/css" href="style.php">
-
+<?php //gotta have them easter eggs!! ?>
+<script src="jsconsole.js"></script>
 </head>
 
 <body>

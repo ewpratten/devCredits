@@ -1,0 +1,10 @@
+<!--
+|--------------|
+|  devCredits  |
+|--------------|
+
+---
+Hello there. Since you are looking around in the developer console, maybe you would like to contribute to the code that makes this prject run. Feel free to check out and contribute to our GitHub repo.
+---
+GitHub: https://github.com/Ewpratten/devCredits
+-->

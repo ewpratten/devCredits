@@ -60,9 +60,6 @@ $users = explode(",", $uservar);
  }
  
  function userispp($u){
- // check if the user is devrant ++ member. if they are, return true
- //https://skayo.2ix.at/DevRantStats/api/getUserInfo.php?username=
- 
  $apiu = "https://skayo.2ix.at/DevRantStats/api/getUserInfo.php?username=" . $u;
  $apir = file_get_contents($apiu);
  $uresp = '{"success":false,"reason":"User not found"}';
@@ -142,7 +139,7 @@ $users = explode(",", $uservar);
 					<?php if (user_exists($user)):?>
 				<a href='https://devrant.com/users/<?=$user?>'>
 					<div class='user'>
-						<h2><?=$user?><?php if (userispp($user) == true) { echo ' ++'; } ?></h2>
+						<h2><?=$user?><?php if (userispp($user) == true) { echo '<i class="pp"> ++</i>'; } ?></h2>
 					</div>
 				</a>
 				<?php endif; ?>

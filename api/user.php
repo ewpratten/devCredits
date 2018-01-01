@@ -17,5 +17,5 @@ function userispp($u){
  if (userispp($username) == true){ $ispp = "true"; } else { $ispp = "false"; }
 //{"success":false,"reason":"User not found"}
 //output
-echo '{"username" : "' . $username . '", "isPlusPlus" : ' . $ispp . '}';
+echo '{"username" : "' . $username . '", "membership" : ' . $ispp . '}';
 ?>

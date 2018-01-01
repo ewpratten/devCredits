@@ -22,6 +22,14 @@
 				4 => '#fe64a3',
 				5 => '#ff7f11',
 				6 => '#57b8ff');
+				
+	$ppc = array(0 => '#000000',
+				1 => '#fe64a3',
+				2 => '#fe64a3',
+				3 => '#fe64a3',
+				4 => '#69306d',
+				5 => '#fe64a3',
+				6 => '#fe64a3');
 
 
 	session_start();
@@ -31,9 +39,11 @@
 	if (array_key_exists($cin, $colors)) {
 		$color = $colors[$cin];
 		$hover = $hoverc[$cin];
+		$pp = $ppc[$cin];
 	} else {
 		$color = $colors[1];
 		$hover = $hoverc[0];
+		$pp = $ppc[0];
 	}
 	//templates from coolors.co
 	
@@ -53,6 +63,9 @@ if ($bgIsAnimated == 'false') {echo "";} else {
 }
 a {
 	color:<?php echo $color; ?>;
+}
+.pp {
+	color:<?php echo $pp; ?>;
 }
 a.dcc:hover {
     color: <?php echo $color; ?>;

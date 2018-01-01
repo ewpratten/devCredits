@@ -49,8 +49,12 @@ $_SESSION['mainColor'] = $cin;
 	}
 	function checkLink($link) {
 		// Check if query value is a url
-		return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $link)) 
-            && preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/", $link));
+		if (preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$link)) {
+			// Check if link is falling under the domain
+			return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/", $link));
+		} else {
+			return false;
+		}
 	}
 	function button($link, $buttonText,$color, $size) {
 		switch ($color) {

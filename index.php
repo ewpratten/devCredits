@@ -43,15 +43,20 @@ global $userimg, $userback, $spuser;
 
 function loadvars($u) {
     global $userimg, $userback, $spuser;
-    
-    $apiu = "https://skayo.2ix.at/DevRantStats/api/getUserInfo.php?username=" . $u;
+
+    $useridcheck = json_decode(file_get_contents("https://devrant.com/api/get-user-id?app=3&username=" . $u),true);
+    $userid= $useridcheck["user_id"];
+    $apiu = "https://www.devrant.io/api/users/" . $userid . "?app=3&plat=2&content=all&skip=0";
     $apir = file_get_contents($apiu);
     $jsondata = json_decode($apir, true);
     if ($jsondata['success'] === true) {
-        $userimg = "https://avatars.devrant.com/" . $jsondata['userinfo']['avatar_url'];
-        $userback = "#" . $jsondata['userinfo']['avatar_bg'];
-        //TODO: FInd way to check if user is supporter
-        $spuser = true;
+        $userimg = "https://avatars.devrant.com/" . $jsondata['profile']['avatar']["i"];
+        $userback = "#" . $jsondata['profile']['avatar']["b"];
+        if ($jsondata['profile']['dpp'] === 1) {
+            $spuser = true;
+        } else {
+            $spuser = false;
+        }
         return true;
     } else {
         return false;

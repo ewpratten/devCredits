@@ -59,11 +59,15 @@ $users = explode(",", $uservar);
      } return 0;
  }
  
- function userispp(){
- // check if the user is devrant ++ member. if they are, return true
- 
- //debug
- return false;
+ function userispp($u){
+ $apiu = "https://skayo.2ix.at/DevRantStats/api/getUserInfo.php?username=" . $u;
+ $apir = file_get_contents($apiu);
+ $uresp = '{"success":false,"reason":"User not found"}';
+ if ($apir == $uresp) {
+ 	return false;
+ } else {
+ 	return true;
+ }
  }
  
  if ($heartstyle == "open") {
@@ -135,7 +139,7 @@ $users = explode(",", $uservar);
 					<?php if (user_exists($user)):?>
 				<a href='https://devrant.com/users/<?=$user?>'>
 					<div class='user'>
-						<h2><?=$user?><?php if (userispp($user) == true) { echo ' ++'; } ?></h2>
+						<h2><?=$user?><?php if (userispp($user) == true) { echo '<i class="pp"> ++</i>'; } ?></h2>
 					</div>
 				</a>
 				<?php endif; ?>
@@ -148,24 +152,4 @@ $users = explode(",", $uservar);
 	</div>
 </div>
 <div class="avatar"><img src="https://devrant.com/static/devrant/img/devrant-header-developer.png"></div>
-<!-- OLD CARD BACKUP -->
-<!-- <div class="flex one three-1000 demo">
-	<div><span></span></div>
-	<div class="maincard">
-			<h1><?php echo $title ?></h1>
-			<h4><?php echo $stext ?></h4>
-			<br />
-			<div class="credits">Made with &#9825; by</div>
-			<hr />
-			<div class="flex two demo">
-<?php foreach ($users as $user):?>
-				<a href='https://devrant.com/users/<?=$user?>'>
-					<div class='user'>
-						<span><h2><?=$user?></h2></span>
-					</div>
-				</a>
-<?php endforeach; ?>
-			</div>
-		</div>
-</div> -->
 </body>

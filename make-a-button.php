@@ -5,11 +5,13 @@ if (isset($_GET["title"])) {
 } else {
 	$title = "devCredits";
 }
+
 if (isset($_GET["subtext"])) {
 	$stext = htmlspecialchars($_GET["subtext"]);
 } else {
 	$stext = "An easy way to credit people from the devRant community";
 }
+
 if (isset($_GET["color"])) {
 	$cin = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_NUMBER_INT);
 } else {
@@ -27,55 +29,39 @@ $_SESSION['mainColor'] = $cin;
 	$buttonColor;
 	$buttonSize;
 	$hrefValue;
-	if(isset($_GET['link']))
-	{
+	if(isset($_GET['link'])) {
 		$link = $_GET['link'];
 	}
 	// Generate button pressed
-	if(isset($_POST['generate']))
-	{
+	if(isset($_POST['generate'])) {
 		$generated = true;
-		if(!empty($_POST['button-text'] && $_POST['button-color'] && $_POST['button-size'] && $_POST['link']))
-		{
+		if(!empty($_POST['button-text'] && $_POST['button-color'] && $_POST['button-size'] && $_POST['link'])) {
 			$buttonText = $_POST['button-text'];
 			$buttonColor = $_POST['button-color'];
 			$buttonSize = $_POST['button-size'];
-			if(checkLink($_POST['link']))
-			{
+			if(checkLink($_POST['link'])) {
 				$hrefValue = $_POST['link'];
 				$validLink = true;
-			}
-			else
-			{
+			} else {
 				$validLink = false;
 			}
 		}
 	}
-	function checkLink($link)
-	{
-		
+	function checkLink($link) {
 		// Check if query value is a url
-		if (preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$link))
-		{
+		if (preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$link)) {
 			// Check if link is falling under the domain
- 			 if(preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/",$link))
- 			 {
- 			 	return true;
- 			 }
- 			 else
- 			 {
- 			 	return false;
- 			 }
-		}
-		else
-		{
-			return  false;
+			if(preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/",$link)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
 		}
 	}
-	function button($link, $buttonText,$color, $size)
-	{
-		switch ($color)
-    	{
+	function button($link, $buttonText,$color, $size) {
+		switch ($color) {
     		// Dark Color
     		case 'dark': ?>
     			<input type="text" value='<a href="<?php echo $link; ?>" class="btn btn-outline-dark <?php echo $size; ?>" role="button" target="_blank" aria-disabled="true"><?php echo $buttonText; ?></a>' class="generated-button-link" readonly/ >

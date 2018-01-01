@@ -44,8 +44,8 @@ global $userimg, $userback, $spuser;
 function loadvars($u) {
     global $userimg, $userback, $spuser;
 
-    $useridcheck = json_decode(file_get_contents("https://devrant.com/api/get-user-id?app=3&username=" . $u),true);
-    $userid= $useridcheck["user_id"];
+    $useridcheck = json_decode(file_get_contents("https://devrant.com/api/get-user-id?app=3&username=" . $u), true);
+    $userid = $useridcheck["user_id"];
     $apiu = "https://www.devrant.io/api/users/" . $userid . "?app=3&plat=2&content=all&skip=0";
     $apir = file_get_contents($apiu);
     $jsondata = json_decode($apir, true);

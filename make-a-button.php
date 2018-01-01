@@ -51,7 +51,11 @@ $_SESSION['mainColor'] = $cin;
 		// Check if query value is a url
 		if (preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$link)) {
 			// Check if link is falling under the domain
-			return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/", $link));
+			if(preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[devdevcredits.herokuapp.com]/",$link)) {
+				return true;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}

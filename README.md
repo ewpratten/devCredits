@@ -40,14 +40,14 @@ then, add the details:
 
 ## Todo
 - [X] allow configuration of background color from link
-- [ ] add profile images to the page
+- [X] add profile images to the page
 - [ ] a collection "devRant community project" banners and embeds for your project site
 - [X] embeddable buttons that link to credits page
 - [X] better mobile version
 - [ ] background images
 - [ ] clean up unused files
-- [ ] test if user exists before displaying name
+- [X] test if user exists before displaying name
 - [ ] profile photo API?
 - [X] customizable heart from link
 - [X] add heart dropdown to link generator
-- [ ] indicator for devRant++ members
+- [X] indicator for devRant++ members

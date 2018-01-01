@@ -31,8 +31,8 @@ h1 {
 .user {
 	margin: 2%;
 	border-radius: 10px;
-	padding: 0;
-	text-align:center;
+	padding: 0 25px;
+	text-align: left;
 }
 hr {
 	background-color:#54556E !important;
@@ -46,6 +46,12 @@ hr {
 right: 0px;
 bottom: 0px;
 }
+
+.useravatar{
+    width:50px;
+    margin-right:30px;
+}
+
 h4 {
 	font-weight: light;
    	color: #54556E;

@@ -1,4 +1,17 @@
 
+<canvas id="profile" width="400" height="400" style="">
+<script>
+var canvas = document.getElementById("profile");
+var ctx = canvas.getContext("2d");
+context.rect(76, 58, 359, 177);
+context.moveTo(130.5, 112.5 - 36.5);
+context.bezierCurveTo(130.5 + (0.5522847498307936 * 36.5), 112.5 - 36.5,  130.5 + 36.5, 112.5 - (0.5522847498307936 * 36.5), 130.5 + 36.5, 112.5);
+context.bezierCurveTo(130.5 + 36.5, 112.5 + (0.5522847498307936 * 36.5), 130.5 + (0.5522847498307936 * 36.5), 112.5 + 36.5, 130.5, 112.5 + 36.5);
+context.bezierCurveTo(130.5 - (0.5522847498307936 * 36.5), 112.5 + 36.5, 130.5 - 36.5, 112.5 + (0.5522847498307936 * 36.5), 130.5 - 36.5, 112.5);
+context.bezierCurveTo(130.5 - 36.5, 112.5 - (0.5522847498307936 * 36.5), 130.5 - (0.5522847498307936 * 36.5), 112.5 - 36.5, 130.5, 112.5 - 36.5);
+context.moveTo(202,96);
+context.lineTo(402,95);
+</script>
 <canvas id="banner" width="400" height="400" style="border-radius:100%;">
 Your browser does not support the canvas element.
 </canvas>

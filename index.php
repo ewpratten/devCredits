@@ -137,7 +137,7 @@ $users = explode(",", $uservar);
 	        <hr/>
 	      	<?php foreach ($users as $user):?>
 					<?php if (user_exists($user)):?>
-				<a href='https://devrant.com/users/<?=$user?>'>
+				<a href='/profile.php?username=<?=$user?>'>
 					<div class='user'>
 						<h2><?=$user?><?php if (userispp($user) == true) { echo '<i class="pp"> ++</i>'; } ?></h2>
 					</div>

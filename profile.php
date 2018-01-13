@@ -42,7 +42,7 @@ if (isset($_GET["username"])) {
 	      <div class="card-body">
 	        
 
-				<a href='https://devrant.com/users/<?=$users; ?>'>
+				<a href='https://devrant.com/users/<?=$uservar; ?>'>
 					
 					<div class="my-card"></div>
 					<script src="https://devunity.herokuapp.com/apps/cards/script.js.php?class=my-card&username=<?php echo $uservar; ?>"></script>
